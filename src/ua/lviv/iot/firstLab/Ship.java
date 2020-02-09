@@ -5,7 +5,7 @@ public class Ship {
 
 	public static int numberOfShips;
 
-	private double tonnazhOfShip;
+	private double tonnazhOfShipInTonnes;
 
 	private String nameOfShip;
 
@@ -13,37 +13,37 @@ public class Ship {
 
 	private String typeOfShip;
 
-	private double lengthOfShip;
+	private double lengthOfShipInMetres;
 
-	protected double speedOfShip;
+	protected double speedOfShipInMilesPerHour;
 
-	protected double widthOfShip;
+	protected double widthOfShipInMetres;
 
 	public Ship() {
 		numberOfShips++;
 	}
 
-	public Ship(double tonnazh, String name, int passengers, String type, double length, double speed, double width) {
-		tonnazhOfShip = tonnazh;
-		nameOfShip = name;
-		numberOfPassengers = passengers;
-		typeOfShip = type;
-		lengthOfShip = length;
-		speedOfShip = speed;
-		widthOfShip = width;
+	public Ship(double tonnazhOfShipInTonnes, String nameOfShip, int numberOfPassengers, String typeOfShip, double lengthOfShipInMetres, double speedOfShipInMilesPerHour, double widthOfShipInMetres) {
+		this.tonnazhOfShipInTonnes = tonnazhOfShipInTonnes;
+		this.nameOfShip = nameOfShip;
+		this.numberOfPassengers = numberOfPassengers;
+		this.typeOfShip = typeOfShip;
+		this.lengthOfShipInMetres = lengthOfShipInMetres;
+		this.speedOfShipInMilesPerHour = speedOfShipInMilesPerHour;
+		this.widthOfShipInMetres = widthOfShipInMetres;
 		numberOfShips++;
 	}
 
-	public Ship(double tonnazh, String name, int passengers, String type) {
-		this(tonnazh, name, passengers, type, 0.0, 0.0, 0.0);
+	public Ship(double tonnazhOfShipInTonnes, String nameOfShip, int numberOfPassengers, String typeOfShip) {
+		this(tonnazhOfShipInTonnes,nameOfShip, numberOfPassengers, typeOfShip, 0.0, 0.0, 0.0);
 	}
 
-	public double getTonnazhOfShip() {
-		return tonnazhOfShip;
+	public double getTonnazhOfShipInTonnes() {
+		return tonnazhOfShipInTonnes;
 	}
 
-	public void setTonnazhOfShip(double tonnazhOfShip) {
-		this.tonnazhOfShip = tonnazhOfShip;
+	public void setTonnazhOfShipInTonnes(double tonnazhOfShipInTonnes) {
+		this.tonnazhOfShipInTonnes = tonnazhOfShipInTonnes;
 	}
 
 	public String getNameOfShip() {
@@ -70,35 +70,35 @@ public class Ship {
 		this.typeOfShip = typeOfShip;
 	}
 
-	public double getLengthOfShip() {
-		return lengthOfShip;
+	public double getLengthOfShipInMetres() {
+		return lengthOfShipInMetres;
 	}
 
-	public void setLengthOfShip(double lengthOfShip) {
-		this.lengthOfShip = lengthOfShip;
+	public void setLengthOfShipInMetres(double lengthOfShipInMetres) {
+		this.lengthOfShipInMetres = lengthOfShipInMetres;
 	}
 
-	public double getSpeedOfShip() {
-		return speedOfShip;
+	public double getSpeedOfShipInMilesPerHour() {
+		return speedOfShipInMilesPerHour;
 	}
 
-	public void setSpeedOfShip(double speedOfShip) {
-		this.speedOfShip = speedOfShip;
+	public void setSpeedOfShipInMilesPerHour(double speedOfShipInMilesPerHour) {
+		this.speedOfShipInMilesPerHour = speedOfShipInMilesPerHour;
 	}
 
-	public double getWidthOfShip() {
-		return widthOfShip;
+	public double getWidthOfShipInMetres() {
+		return widthOfShipInMetres;
 	}
 
-	public void setWidthOfShip(double widthOfShip) {
-		this.widthOfShip = widthOfShip;
+	public void setWidthOfShip(double widthOfShipInMetres) {
+		this.widthOfShipInMetres = widthOfShipInMetres;
 	}
 
 	public String toString() {
-		return "Name of ship:           " + nameOfShip + "\n" + "Tonnazh of ship:        " + tonnazhOfShip + " t\n"
+		return "Name of ship:           " + nameOfShip + "\n" + "Tonnazh of ship:        " + tonnazhOfShipInTonnes + " t\n"
 				+ "Amount of passengers:   " + numberOfPassengers + "\n" + "Type of ship:           " + typeOfShip
-				+ "\n" + "Length of ship:         " + lengthOfShip + " m\n" + "Speed of ship:          " + speedOfShip
-				+ " miles/hour\n" + "Width of ship:          " + widthOfShip + " m\n";
+				+ "\n" + "Length of ship:         " + lengthOfShipInMetres + " m\n" + "Speed of ship:          " + speedOfShipInMilesPerHour
+				+ " miles/hour\n" + "Width of ship:          " + widthOfShipInMetres + " m\n";
 	}
 
 	public static void printStaticNumberOfShips() {
@@ -113,12 +113,12 @@ public class Ship {
 
 	public void resetValues(double tonnazh_, String name_, int passengers_, String type_, double length_, double speed_,
 			double width_) {
-		tonnazhOfShip = tonnazh_;
+		tonnazhOfShipInTonnes = tonnazh_;
 		nameOfShip = name_;
 		numberOfPassengers = passengers_;
 		typeOfShip = type_;
-		lengthOfShip = length_;
-		speedOfShip = speed_;
-		widthOfShip = width_;
+		lengthOfShipInMetres = length_;
+		speedOfShipInMilesPerHour = speed_;
+		widthOfShipInMetres = width_;
 	}
 }
